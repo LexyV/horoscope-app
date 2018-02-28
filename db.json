@@ -1,54 +1,4 @@
 {
-  "sunSigns" : [
-    {
-      "id"  : 1,
-      "name": "Capricorn" 
-    },
-    {
-      "id"  : 2,
-      "name": "Aquarius"
-    },
-    {
-      "id"  : 3,
-      "name": "Pisces" 
-    },
-    {
-      "id"  : 4,
-      "name": "Aries" 
-    },
-    {
-     "id"  : 5,
-     "name": "Taurus" 
-    },
-    {
-      "id"  : 6,
-      "name": "Gemini" 
-    },
-    {
-      "id"  : 7,
-      "name": "Cancer" 
-    },
-    {
-      "id"  : 8,
-      "name": "Leo" 
-    },
-    {
-      "id"  : 9,
-      "name": "Virgo" 
-    },
-    {
-      "id"  : 10,
-      "name": "Libra" 
-    },
-    {
-      "id"  : 11,
-      "name": "Scorpio" 
-    },
-    {
-      "id"  : 12,
-      "name": "Sagittarius" 
-    }
-  ],
   "horoscopes" : [
     {
       "id"  : 1,
@@ -61,7 +11,12 @@
     },
     {
       "id"  : 3,
-      "name": "Pisces" 
+      "name": "Pisces",
+      "description" : "You will encounter frustration this week when you come across a Libra trying to research if Kim Kardashian's butt is fake. Just remember to woosah your way home.",
+      "love" : "hi",
+      "success": "success",
+      "travel": "The equilibrium of Saturn’s seventh moon alignment with Pluto puts the sun in your water axis this week. That could go either way, so try not to do too much speaking or walking or living.",
+      "party": "party"
     },
     {
       "id"  : 4,

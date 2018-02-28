@@ -15,26 +15,25 @@ router.get('/horoscopes/:id/comments/new', (req, res, next) => {
     });
 });
 
-// Route to Handle Review Form Submission
+// Route to Handle Comment Form Submission
 router.post('/horoscopes/:id/comments', (req, res, next) => {
     // Load the Horoscope From the Database
     let horoscopeId = req.params.id;
 
     Horoscope.findById(horoscopeId, (err, horoscope) => {
-        // Create the Schema Object to Save the Review
+        // Create the Schema Object to Save the Comment
         const newComment = new Comment({
-            content: req.body.content,
-            stars: req.body.stars
+            content: req.body.content
         });
         
-        // Add Review to Product Reviews Array
+        // Add Comment to Horoscope Comments Array
         horoscope.comments.push(newComment);
     
-        // Save the product to the Database
+        // Save the horoscope to the Database
         horoscope.save((err) => {
             if (err) { return next(err); }
-            // Redirect the user to the product page
-            res.redirect('/horoscopes/:id');
+            // Redirect the user to the index page
+            res.redirect('index');
         });
     });
 });

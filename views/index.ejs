@@ -10,54 +10,146 @@
   <link rel="stylesheet" href="stylesheets/style.css">
   <title>Home</title>
 </head>
-
 <body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">Horoscope</a>
-          </div>
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/signs">Signs</a></li>
-            <li><a href="/comments">Comments</a></li>
-            <li><a href="#">About</a></li>
-          </ul>
-        </div>
-      </nav>
+<div>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Horoscope</a>
+      </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/signs">Zodiac Signs</a></li>
+          <li><a href="/comments">Comments</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+    </nav>
+</div>    
     <div class="container">
-        <h1>Daily Horoscope</h1>
-        <blockquote class="blockquote-reverse">
-          <p>On a day when relaxing and postponing serious obligations 
-            or responsibilities is expected, try to seize a chance to 
-            put off until tomorrow what genuinely doesn't need to be done today. 
-            This is particularly relevant for making commitments or signing 
-            on any dotted lines. You might not have as accurate an understanding 
-            of what's involved in ways you believe you do. A day really could make a difference.</p>
-          <footer>01/12/18</footer>
-        </blockquote>
-        <div class="form-group">
-            <label for="comment">Comments:</label>
-            <textarea class="form-control input-sm" rows="2" id="comment"></textarea>
-            <!-- <input type="submit" class="btn btn-info" value="Submit Button"> -->
+      <div class="row">
+    <h1><%= user.sign  %> <%= "Daily Horoscope" %></h1>
+      <blockquote class="blockquote-reverse">
+        <p><% horoscopes.forEach(oneHoroscope =>{ %>
+          <% if(user.sign === oneHoroscope.name) { %>
+            <%= oneHoroscope.description %>
+          <% }})  %>
+        </p>
+      <footer></footer>
+      </blockquote>
+      <div class="form-group com">
+        <label for="comment">Comments:</label>
+        <textarea class="form-control input-sm" rows="2" id="comment"></textarea>
+        <!-- <input type="submit" class="btn btn-info" value="Submit Button"> -->
+      </div>
+    </div>   
+  <!-- Button Love Modal -->
+  <button type="button" class="btn col-md-4 btn-primary glyphicon glyphicon-heart" data-toggle="modal" data-target="#loveModal">
+    Love
+  </button>
+  <!-- Love Modal -->
+  <div class="modal fade" id="loveModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loveModalLabel">Love</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <% horoscopes.forEach(oneHoroscope =>{ %>
+            <% if(user.sign === oneHoroscope.name) { %>
+              <%= oneHoroscope.love %>
+            <% }})  %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn1 btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
-<div class = "container">    
-  <div class="row">
-  <button type="button" class="col-md-4 btn btn-primary" data-toggle="modal" data-target="#myModal">
-    <span class="glyphicon glyphicon-heart"></span> Love
-  </button>
-  <button type="button" class="col-md-4 btn btn-success">
-    <span class="glyphicon glyphicon-usd"></span> Success</button>
-  <button type="button" class="col-md-4 btn btn-info">
-    <span class="glyphicon glyphicon-plane"></span> Travel</button>
-  <button type="button" class="col-md-6 btn btn-warning">
-    <span class="glyphicon glyphicon-glass"></span> Party</button>
-  <button type="button" class="col-md-6 btn btn-danger">Monthly</button>
+    </div>
+  </div>
+  <!-- Button Success Modal -->
+  <button type="button" class="btn col-md-4 btn-success glyphicon glyphicon-usd" data-toggle="modal" data-target="#successModal">
+      Success
+    </button>
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="successModalLabel">Success</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <% horoscopes.forEach(oneHoroscope =>{ %>
+                <% if(user.sign === oneHoroscope.name) { %>
+                  <%= oneHoroscope.success %>
+                <% }})  %>  
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn1 btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Button Travel Modal -->
+    <button type="button" class="btn col-md-4 btn-info glyphicon glyphicon-plane" data-toggle="modal" data-target="#travelModal">
+        Travel
+      </button>
+        <!-- Travel Modal -->
+      <div class="modal fade" id="travelModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="travelModalLabel">Travel</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <% horoscopes.forEach(oneHoroscope =>{ %>
+                  <% if(user.sign === oneHoroscope.name) { %>
+                    <%= oneHoroscope.travel %>
+                  <% }})  %> 
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn1 btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Button Party Modal -->
+      <button type="button" class="btn col-md-4 btn-danger glyphicon glyphicon-glass" data-toggle="modal" data-target="#partyModal">
+          Party
+        </button>
+        <!-- Party Modal -->
+        <div class="modal fade" id="partyModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="partyModalLabel">Party</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <% horoscopes.forEach(oneHoroscope =>{ %>
+                    <% if(user.sign === oneHoroscope.name) { %>
+                      <%= oneHoroscope.party %>
+                    <% }})  %> 
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn1 btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
  </div>
-</div> 
-
-
-
+ <div class="footer">
+    <p>GitHub</p>
+  </div>
 </body>
 </html>

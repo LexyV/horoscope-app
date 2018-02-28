@@ -4,7 +4,7 @@ const router       = express.Router();
 const request = require('request');
 var sunsigns;
 
-router.get('/sunsigns', (req, res, next) => {
+router.get('/horoscope', (req, res, next) => {
 
     request({
         uri: 'http://localhost:3000/api/sunsigns'
@@ -14,21 +14,8 @@ router.get('/sunsigns', (req, res, next) => {
     });
 
     res.render('/Users/lexy/Desktop/Ironhack/app1/horoscopes/views/horoscopes/sunsigns.ejs', {sunsigns});
-    // console.log(sunsigns);
 });
 
-router.get('/', (req, res, next) => {
-   
-})
-
-// router.get('/', (req, res, next) => {
-//     Horoscope.find({}, (err, horoscope) => {
-//         if (err) {return next(err) }
-//         res.render('/horoscopes/index', {
-//         horoscope: horoscope
-//         });
-//     });
-// });
 
 router.get('/:id', (req, res, next) => {
     const horoscopeId = req.params.id;

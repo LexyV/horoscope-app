@@ -3,9 +3,9 @@ var route       = express.Router();
 var axios = require("axios");
 var base_url = "http://localhost:3000";
 var json = require("../db.json")
-console.log("my json: ", json)
+// console.log("my json: ", json)
 
-
+// const User        = require("../models/user");
 
 route.get('/', (req, res, next) => {
     // console.log("------")
@@ -20,9 +20,9 @@ route.get('/', (req, res, next) => {
 
 
 // console.log("current user:", user)
-
+    res.locals.user = req.user;
     res.render('index', {
-        horoscopes: json.horoscopess,
+        horoscopes: json.horoscopes,
         // user
     });
 

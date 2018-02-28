@@ -1,6 +1,9 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('https://securecdn.pymnts.com/wp-content/uploads/2016/09/Blockchain-in-Space.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
   
 a {
@@ -14,7 +17,7 @@ a {
 }
   
 #form label {
-  color: rgb(58, 53, 53);
+  color: white;
   display: inline-block;
   margin-bottom: 15px;
   text-align: center;
@@ -31,7 +34,7 @@ a {
 }
   
 #form button {
-  background: #00FF83;
+  background: rgb(0, 183, 255);
   border-radius: 6px;
   color: black;
   cursor: pointer;
@@ -51,7 +54,7 @@ a {
 }
 
 .btn{
-  font-size: 60px;
+  font-size: 55px;
   margin: 5px;
 }
 
@@ -76,4 +79,38 @@ a {
 /* .row{
   position: relative;
 
+} */
+p{
+  color: white;
+}
+h2{
+  color: pink;
+  text-align: center;
+}
+h1{
+  color: white;
+}
+.btn1{
+  font-size: 20px;
+}
+.com{
+  color: white;
+}
+.footer {
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+    height: 50px;
+    bottom: 0;
+    width: 94%;
+}
+
+/* .container{ */
+  /* background-color: rgb(211, 164, 195); */
+  /* opacity: 0.8; */
+  /* width: 450px; */
+/* } */
+/* .container{
+  background-color: rgb(211, 164, 195);
+  opacity: 0.8;
 } */

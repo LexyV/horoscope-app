@@ -12,6 +12,7 @@
     <title>Log in</title>
   </head>
   <body>
+<div class = "container1">   
   <form action="/login" method="POST" id="form">
     <h2>Login</h2>
 
@@ -21,15 +22,16 @@
     <label for="password">Password</label>
     <input type="password" name="password" placeholder="password">
 
-    <% if (typeof errorMessage !== "undefined") { %>
-      <div class="error-message"><%= errorMessage %></div>
-    <% } %>
-
+    <!-- <% if (typeof message !== "undefined") { %>
+      <div class="error-message"><%= message %></div>
+    <% } %> -->
+    <br><br>
     <button>Sign in</button>
-
+    <br><br>
     <p class="account-message">
       Don't have an account? <a href="/signup">Sign up</a>
     </p>
-  </form>
-  </body>
+</div> 
+</form>
+</body>
 </html>
