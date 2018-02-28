@@ -1,0 +1,12 @@
+<ul>
+    <% horoscope.forEach((horoscope) => { %>
+        <li>
+            <%= horoscope.sunSign %> - <%= horoscope.horoscope %>
+            <a href="/horoscope/<%= horoscope._id %>">View Horoscope</a> 
+            <a href="/horoscope/<%= horoscope._id %>/edit">Comment</a>
+            <form action="/horoscope/<%= horoscope._id%>/delete" method="POST">
+                <button type="submit">Delete Comment</button>
+            </form> 
+        </li>
+    <% }) %>
+</ul>

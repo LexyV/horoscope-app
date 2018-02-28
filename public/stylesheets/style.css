@@ -1,0 +1,79 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+  
+a {
+  color: red;
+  text-align: center;
+}
+  
+#form {
+  margin: 30px auto;
+  width: 400px;
+}
+  
+#form label {
+  color: rgb(58, 53, 53);
+  display: inline-block;
+  margin-bottom: 15px;
+  text-align: center;
+  width: 100%;
+}
+  
+#form input,
+#form button {
+  box-sizing: border-box;
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 4px;
+  width: 100%;
+}
+  
+#form button {
+  background: #00FF83;
+  border-radius: 6px;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  padding: 8px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.error-message {
+  background: red;
+  box-sizing: border-box;
+  color: black;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.btn{
+  font-size: 60px;
+  margin: 5px;
+}
+
+.btn-primary {
+  background: #FF00A6;
+  color: #ffffff;
+}
+
+.btn-info{
+  background: #0094FF;
+}
+
+.btn-lg.round {
+	border-radius: 24px;
+}
+
+.btn-grid > .btn
+{
+    margin: 10px 0;
+}
+
+/* .row{
+  position: relative;
+
+} */

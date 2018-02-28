@@ -1,0 +1,104 @@
+{
+  "sunSigns" : [
+    {
+      "id"  : 1,
+      "name": "Capricorn" 
+    },
+    {
+      "id"  : 2,
+      "name": "Aquarius"
+    },
+    {
+      "id"  : 3,
+      "name": "Pisces" 
+    },
+    {
+      "id"  : 4,
+      "name": "Aries" 
+    },
+    {
+     "id"  : 5,
+     "name": "Taurus" 
+    },
+    {
+      "id"  : 6,
+      "name": "Gemini" 
+    },
+    {
+      "id"  : 7,
+      "name": "Cancer" 
+    },
+    {
+      "id"  : 8,
+      "name": "Leo" 
+    },
+    {
+      "id"  : 9,
+      "name": "Virgo" 
+    },
+    {
+      "id"  : 10,
+      "name": "Libra" 
+    },
+    {
+      "id"  : 11,
+      "name": "Scorpio" 
+    },
+    {
+      "id"  : 12,
+      "name": "Sagittarius" 
+    }
+  ],
+  "horoscopes" : [
+    {
+      "id"  : 1,
+      "name": "Capricorn", 
+      "description" : "You are capicorn."
+    },
+    {
+      "id"  : 2,
+      "name": "SECOND ONE"
+    },
+    {
+      "id"  : 3,
+      "name": "Pisces" 
+    },
+    {
+      "id"  : 4,
+      "name": "Aries" 
+    },
+    {
+      "id"  : 5,
+      "name": "Taurus" 
+    },
+    {
+      "id"  : 6,
+      "name": "Gemini" 
+    },
+    {
+      "id"  : 7,
+      "name": "Cancer" 
+    },
+    {
+      "id"  : 8,
+      "name": "Leo" 
+    },
+    {
+      "id"  : 9,
+      "name": "Virgo" 
+    },
+    {
+      "id"  : 10,
+      "name": "Libra" 
+    },
+    {
+      "id"  : 11,
+      "name": "Scorpio" 
+    },
+    {
+      "id"  : 12,
+      "name": "Sagittarius" 
+    }
+  ]
+}
+

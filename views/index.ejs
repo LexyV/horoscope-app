@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <title>Home</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Horoscope</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/signs">Signs</a></li>
+            <li><a href="/comments">Comments</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+      </nav>
+    <div class="container">
+        <h1>Daily Horoscope</h1>
+        <blockquote class="blockquote-reverse">
+          <p>On a day when relaxing and postponing serious obligations 
+            or responsibilities is expected, try to seize a chance to 
+            put off until tomorrow what genuinely doesn't need to be done today. 
+            This is particularly relevant for making commitments or signing 
+            on any dotted lines. You might not have as accurate an understanding 
+            of what's involved in ways you believe you do. A day really could make a difference.</p>
+          <footer>01/12/18</footer>
+        </blockquote>
+        <div class="form-group">
+            <label for="comment">Comments:</label>
+            <textarea class="form-control input-sm" rows="2" id="comment"></textarea>
+            <!-- <input type="submit" class="btn btn-info" value="Submit Button"> -->
+        </div>
+      </div>
+<div class = "container">    
+  <div class="row">
+  <button type="button" class="col-md-4 btn btn-primary" data-toggle="modal" data-target="#myModal">
+    <span class="glyphicon glyphicon-heart"></span> Love
+  </button>
+  <button type="button" class="col-md-4 btn btn-success">
+    <span class="glyphicon glyphicon-usd"></span> Success</button>
+  <button type="button" class="col-md-4 btn btn-info">
+    <span class="glyphicon glyphicon-plane"></span> Travel</button>
+  <button type="button" class="col-md-6 btn btn-warning">
+    <span class="glyphicon glyphicon-glass"></span> Party</button>
+  <button type="button" class="col-md-6 btn btn-danger">Monthly</button>
+ </div>
+</div> 
+
+
+
+</body>
+</html>

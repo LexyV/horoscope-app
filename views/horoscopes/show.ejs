@@ -1,0 +1,13 @@
+<h1><%= horoscope.sunSign %></h1>
+<h3>horoscope: <span>$<%= horoscope.horoscope %></span></h3>
+<p><%= horoscope.date %></p>
+
+<hr>
+<h2>Comments</h2>
+<ul>
+    <% horoscope.comments.forEach((comments) => { %>
+        <li>
+            <p><%= comments.content %></p>
+        </li>
+    <% }) %>
+</ul>
