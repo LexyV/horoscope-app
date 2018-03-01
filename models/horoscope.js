@@ -3,9 +3,8 @@ const Comment      = require('./comment');
 const Schema        = mongoose.Schema;
 
 const HoroscopeSchema = new Schema({
-    sunSign         : String,
     horoscope       : String,
-    // date            : String,
+    date            : String,
     comments        :[Comment.schema]
 });
 

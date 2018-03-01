@@ -27,129 +27,88 @@
     </nav>
 </div>    
     <div class="container">
-      <div class="row">
+      <div class="row horo">
     <h1><%= user.sign  %> <%= "Daily Horoscope" %></h1>
       <blockquote class="blockquote-reverse">
         <p><% horoscopes.forEach(oneHoroscope =>{ %>
           <% if(user.sign === oneHoroscope.name) { %>
             <%= oneHoroscope.description %>
+
+          <div class="form-group com">
+            <form action="/horoscopes/<%= oneHoroscope.id %>/comments" method="post">
+              <label for="comment">Comments:</label>
+              <textarea class="form-control input-sm" rows="2" id="comment" style = "border:2px dashed rgb(196, 70, 189) ;" name="content"></textarea>
+              <button type="submit">Submit</button>
+            </form>
+
           <% }})  %>
+          
+            <!-- <input type="submit" class="btn btn-info" value="Submit Button"> -->
+          </div>
         </p>
       <footer></footer>
-      </blockquote>
-      <div class="form-group com">
-        <label for="comment">Comments:</label>
-        <textarea class="form-control input-sm" rows="2" id="comment"></textarea>
-        <!-- <input type="submit" class="btn btn-info" value="Submit Button"> -->
-      </div>
-    </div>   
-  <!-- Button Love Modal -->
-  <button type="button" class="btn col-md-4 btn-primary glyphicon glyphicon-heart" data-toggle="modal" data-target="#loveModal">
-    Love
-  </button>
-  <!-- Love Modal -->
-  <div class="modal fade" id="loveModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="loveModalLabel">Love</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <% horoscopes.forEach(oneHoroscope =>{ %>
-            <% if(user.sign === oneHoroscope.name) { %>
-              <%= oneHoroscope.love %>
-            <% }})  %>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn1 btn-secondary" data-dismiss="modal">Close</button>
+    </blockquote>
+    </div>
+  </div>   
+   <!-- Button Love Modal -->
+  
+<div class = "row1">
+ <div class="container1">
+   <div class="test1">
+    <img src="../images/background.jpg" alt="love" class="image1">
+      <div class="overlay1">
+        <div class="text">
+          <% horoscopes.forEach(oneHoroscope =>{ %>
+          <% if(user.sign === oneHoroscope.name) { %>
+            <%= oneHoroscope.love %>
+          <% }})  %>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Button Success Modal -->
-  <button type="button" class="btn col-md-4 btn-success glyphicon glyphicon-usd" data-toggle="modal" data-target="#successModal">
-      Success
-    </button>
-    <!-- Success Modal -->
-    <div class="modal fade" id="successModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="successModalLabel">Success</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
+  </div>  
+  <div class="container2">
+      <div class="test2">
+       <img src="../images/background.jpg" alt="love" class="image2">
+         <div class="overlay2">
+           <div class="text">
               <% horoscopes.forEach(oneHoroscope =>{ %>
                 <% if(user.sign === oneHoroscope.name) { %>
                   <%= oneHoroscope.success %>
-                <% }})  %>  
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn1 btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Button Travel Modal -->
-    <button type="button" class="btn col-md-4 btn-info glyphicon glyphicon-plane" data-toggle="modal" data-target="#travelModal">
-        Travel
-      </button>
-        <!-- Travel Modal -->
-      <div class="modal fade" id="travelModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="travelModalLabel">Travel</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
+                <% }})  %>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="container3">
+        <div class="test3">
+         <img src="../images/background.jpg" alt="love" class="image3">
+           <div class="overlay3">
+             <div class="text">
                 <% horoscopes.forEach(oneHoroscope =>{ %>
                   <% if(user.sign === oneHoroscope.name) { %>
                     <%= oneHoroscope.travel %>
-                  <% }})  %> 
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn1 btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Button Party Modal -->
-      <button type="button" class="btn col-md-4 btn-danger glyphicon glyphicon-glass" data-toggle="modal" data-target="#partyModal">
-          Party
-        </button>
-        <!-- Party Modal -->
-        <div class="modal fade" id="partyModal" tabindex="-1" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="partyModalLabel">Party</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
+                  <% }})  %>
+             </div>
+           </div>
+         </div>
+       </div>
+       <div class="container4">
+          <div class="test4">
+           <img src="../images/background.jpg" alt="love" class="image4">
+             <div class="overlay4">
+               <div class="text">
                   <% horoscopes.forEach(oneHoroscope =>{ %>
                     <% if(user.sign === oneHoroscope.name) { %>
                       <%= oneHoroscope.party %>
-                    <% }})  %> 
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn1 btn-secondary" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
+                    <% }})  %>
+               </div>
+             </div>
+           </div>
+         </div>
         </div>
- </div>
  <div class="footer">
     <p>GitHub</p>
   </div>
+</div>
 </body>
 </html>

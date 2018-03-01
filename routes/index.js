@@ -18,8 +18,7 @@ route.get('/', (req, res, next) => {
     //     })
     // })
 
-
-// console.log("current user:", user)
+    // console.log("current user:", user)
     res.locals.user = req.user;
     res.render('index', {
         horoscopes: json.horoscopes,

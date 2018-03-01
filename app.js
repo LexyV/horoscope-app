@@ -63,55 +63,9 @@ app.use(session({
 }));
 
 
-
-// passport.serializeUser((user, cb) => {
-//   cb(null, user._id);
-// });
-
-// passport.deserializeUser((id, cb) => {
-//   User.findOne({ "_id": id }, (err, user) => {
-//     if (err) { return cb(err); }
-//     cb(null, user);
-//   });
-// });
-
 app.use(flash());
-// passport.use(new LocalStrategy({
-//   passReqToCallback: true
-// }, (req, username, password, next) => {
-//   User.findOne({ username }, (err, user) => {
-//     if (err) {
-//       return next(err);
-//     }
-//     if (!user) {
-//       return next(null, false, { message: "Incorrect username" });
-//     }
-//     if (!bcrypt.compareSync(password, user.password)) {
-//       return next(null, false, { message: "Incorrect password" });
-//     }
-
-//     return next(null, user);
-//   });
-// }));
-
 app.use(passport.initialize());
 app.use(passport.session());
-
-
-
-
-
-
-// gives us a user that's currently log in 
-// so it's available in all pages
-// app.use((req, res, next)=>{
-//   if(typeOf(req.user) !== "undefined") {
-//     res.locals.user = true; // !!!!!!
-//   } else {
-//     res.locals.user = false;
-//   }
-//   next();
-// });
 
 app.use((req, res, next)=> {
   if(req.user){
@@ -122,7 +76,6 @@ app.use((req, res, next)=> {
 
 //MIDDLEWARE
 app.use('/', authRoutes);
-// app.use('/', siteRoutes);
 app.use('/', index);
 app.use('/signs', signs);
 app.use('/', commentsRoute);

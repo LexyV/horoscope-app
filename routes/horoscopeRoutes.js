@@ -38,7 +38,6 @@ router.post('/:id', (req, res, next) => {
     const horoscopeId = req.params.id;
 
     const updates = {
-        sunSign: req.body.sunSign,
         horoscope: req.body.horoscope,
         date: req.body.date,
         comments: req.body.comments

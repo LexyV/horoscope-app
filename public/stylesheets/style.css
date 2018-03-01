@@ -5,21 +5,26 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.container{
+  padding-top: 40px;
+}
   
 a {
-  color: red;
+  color: black;
   text-align: center;
+  text-decoration: underline;
 }
   
 #form {
   margin: 30px auto;
-  width: 400px;
+  width: 350px;
 }
   
 #form label {
-  color: white;
+  color: black;
   display: inline-block;
   margin-bottom: 15px;
+  padding-top: 10px;
   text-align: center;
   width: 100%;
 }
@@ -34,7 +39,7 @@ a {
 }
   
 #form button {
-  background: rgb(0, 183, 255);
+  background: rgb(196, 70, 189);
   border-radius: 6px;
   color: black;
   cursor: pointer;
@@ -43,6 +48,7 @@ a {
   padding: 8px;
   text-transform: uppercase;
   width: 100%;
+  margin-bottom: 13px;
 }
 
 .error-message {
@@ -54,17 +60,63 @@ a {
 }
 
 .btn{
-  font-size: 55px;
+  font-size: 54px;
   margin: 5px;
 }
 
-.btn-primary {
-  background: #FF00A6;
-  color: #ffffff;
+.btn1 {
+  background: url("https://media.giphy.com/media/26ufcYAkp8e66vanu/giphy.gif") no-repeat scroll 0 0 transparent;
+  color: black;
+  cursor: pointer;
+  /* font-weight: bold; */
+  height: 300px;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 75px;
+  border-radius: 25px;
+  padding-bottom: 2px;
+  width: 175px;
+}
+.btn2 {
+  background: url("../images/background.jpg") no-repeat scroll 0 0 transparent;
+  color: black;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-right: 85px;
+  /* font-weight: bold; */
+  height: 300px;
+  margin-top: 20px;
+  border-radius: 25px;
+  padding-bottom: 2px;
+  width: 175px;
 }
 
-.btn-info{
-  background: #0094FF;
+.btn3{
+  background: url("../images/background.jpg") no-repeat scroll 0 0 transparent;
+  color: #ffffff;
+  cursor: pointer;
+  margin-left: 30px;
+  margin-right: 75px;
+  /* font-weight: bold; */
+  height: 300px;
+  margin-top: 20px;
+  border-radius: 25px;
+  padding-bottom: 2px;
+  width: 175px;
+
+}
+.btn4 {
+  background: url("../images/background.jpg") no-repeat scroll 0 0 transparent;
+  color: #ffffff;
+  cursor: pointer;
+  margin-left: 30px;
+  margin-right: 65px;
+  /* font-weight: bold; */
+  height: 300px;
+  margin-top: 20px;
+  padding-bottom: 2px;
+  border-radius: 25px;
+  width: 175px;
 }
 
 .btn-lg.round {
@@ -76,25 +128,45 @@ a {
     margin: 10px 0;
 }
 
-/* .row{
-  position: relative;
+.row2{
+  display: flex;
+  display: row;
+  justify-content: space-around;
+  margin-bottom: 15px;
+  border-image: 30% round; 
+}
+.row3{
+  display: flex;
+  display: row;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+.row4{
+  display: flex;
+  display: row;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
 
-} */
 p{
-  color: white;
+  color: black;
+  font-size: 23px;;
 }
 h2{
-  color: pink;
+  color: black;
   text-align: center;
 }
 h1{
-  color: white;
+  color: black;
+  padding-bottom: 20px;
 }
 .btn1{
   font-size: 20px;
 }
 .com{
-  color: white;
+  color: black;
+  width: 1070px;
+  float: right;
 }
 .footer {
   text-align: center;
@@ -104,13 +176,155 @@ h1{
     bottom: 0;
     width: 94%;
 }
+.horo{
+  background-color: rgb(124, 183, 190);
+  opacity: 0.7;
+}
+.horo1{
+  background-color: rgb(124, 183, 190);
+  opacity: 0.9;
+  width: 650px;
+ margin-left: 350px;
+ margin-top: 150px;
+ padding-bottom: 1px;;
+}
+.link{
+  color: rgb(196, 70, 189);
+}
 
-/* .container{ */
-  /* background-color: rgb(211, 164, 195); */
-  /* opacity: 0.8; */
-  /* width: 450px; */
-/* } */
-/* .container{
-  background-color: rgb(211, 164, 195);
-  opacity: 0.8;
-} */
+
+
+.row1{
+  display: flex;
+  /* justify-content: space-around; */
+  display: row;
+}
+.imgs{
+  border-radius: 35px;
+}
+.container1 {
+  position: relative;
+  margin-top: 20px;
+  width: 230px;
+  margin-left: 140px;
+}
+.container2 {
+  position: relative;
+  margin-top: 20px;
+  width: 230px;
+  margin-left: 45px;
+}
+.container3 {
+  position: relative;
+  margin-top: 20px;
+  width: 230px;
+  margin-left: 45px;
+}
+.container4 {
+  position: relative;
+  margin-top: 20px;
+  width: 230px;
+  margin-left: 45px;
+}
+
+.image1 {
+  display: block;
+  width: 100%;
+  height: 300px;
+  width: 230px;
+  border-radius: 30px;
+}
+.image2 {
+  display: block;
+  width: 100%;
+  height: 300px;
+  width: 230px;
+  border-radius: 30px;
+}
+.image3 {
+  display: block;
+  width: 100%;
+  height: 300px;
+  width: 230px;
+  border-radius: 30px;
+}
+.image4 {
+  display: block;
+  width: 100%;
+  height: 300px;
+  width: 230px;
+  border-radius: 30px;
+}
+
+.overlay1 {
+  position: absolute;
+  border-radius: 30px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(124, 183, 190);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.overlay2 {
+  position: absolute;
+  border-radius: 30px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(124, 183, 190);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+.overlay3 {
+  position: absolute;
+  border-radius: 30px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(124, 183, 190);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+.overlay4 {
+  position: absolute;
+  border-radius: 30px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(124, 183, 190);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+.test1:hover .overlay1 {
+  height: 100%;
+}
+.test2:hover .overlay2 {
+  height: 100%;
+}
+.test3:hover .overlay3 {
+  height: 100%;
+}
+.test4:hover .overlay4 {
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
