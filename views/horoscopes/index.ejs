@@ -24,18 +24,15 @@
           </ul>
         </div>
     </nav>
-</body>
-</html> 
-<ul>
-    <% horoscopes.forEach((oneHoroscope) => { %>
+ <ul>
+     <% horoscopes.forEach((oneHoroscope) => { %>
         <li>
             <%= oneHoroscope.description %>
-            <a href="/horoscopes/<%= oneHoroscope._id %>">View Horoscope</a> 
-            <a href="/horoscopes/<%= oneHoroscope._id %>/edit">Edit</a>
-            <form action="/horoscopes/<%= oneHoroscope._id%>/delete" method="POST">
-                <button type="submit">Delete Comment</button>
-            </form> 
+            <a href="/horoscopes/<%= oneHoroscope._id %>/allcomments">View Horoscope</a>  
         </li>
     <% }) %>
 </ul>
+</body>
+</html>
+
 

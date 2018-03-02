@@ -9,8 +9,12 @@ const HoroscopeSchema = new Schema({
     success: String,
     travel: String,
     party: String,
+    comments: {
+        creator: { type: Schema.Types.ObjectId, ref: 'User', required: true },
+        content: String
+    }
     // date            : String,
-    comments        :[Comment.schema]
+    // comments        :[Comment.schema]
 });
 
 const Horoscope     = mongoose.model('Horoscope', HoroscopeSchema);
