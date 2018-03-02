@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+< lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="stylesheet" href="../../stylesheets/style.css">
   <title>Comments</title>
 </head>
-<body>
+
     <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -20,18 +20,19 @@
             <li class="active"><a href="/">Home</a></li>
             <li><a href="/signs">Signs</a></li>
             <li><a href="/comments">Comments</a></li>
-            <li><a href="#">About</a></li>
           </ul>
         </div>
     </nav>
- <ul>
+    <div class = "horo2">
+        <form action="/view" method="POST" id="form">
      <% horoscopes.forEach((oneHoroscope) => { %>
-        <li>
-            <%= oneHoroscope.description %>
-            <a href="/horoscopes/<%= oneHoroscope._id %>/allcomments">View Horoscope</a>  
-        </li>
+        
+            <div class = "hi"><%= oneHoroscope.name %></div>  <div class = "hi2"><%= oneHoroscope.description %></div>
+            <button><a href="/horoscopes/<%= oneHoroscope._id %>/allcomments">View Horoscope</a></button> 
+        
     <% }) %>
-</ul>
+  </div>
+</form>
 </body>
 </html>
 

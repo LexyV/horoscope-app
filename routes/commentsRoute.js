@@ -57,6 +57,7 @@ router.post('/horoscopes/:id/comments', (req, res, next) => {
 
 // delete comments
 router.post('/horoscopes/:id/deletecomment',(req, res, next)=>{
+    console.log("hitting here")
     let horoscopeId = req.params.id;
     Horoscope.findByIdAndUpdate(horoscopeId, {"$unset": {comments:""}}, (err)=>{
         if(err){

@@ -7,7 +7,7 @@ var cookieParser  = require('cookie-parser');
 var bodyParser    = require('body-parser');
 
 // Configure Express Layouts / Mongoose
-// const expressLayouts = require('express-ejs-layouts');
+const expressLayouts = require('express-ejs-layouts');
 const mongoose    = require('mongoose');
 
 // Authentication / Authorization
@@ -18,6 +18,8 @@ const flash = require('connect-flash');
 // Passport Strategy & Configuration
 // const LocalStrategy = require('passport-local').Strategy;
 const User        = require('./models/user');
+const Horoscope        = require('./models/horoscope');
+
 // const bcrypt      = require('bcrypt');
 
 //Routes
@@ -26,7 +28,6 @@ var signs         = require('./routes/signs');
 const authRoutes  = require('./routes/authRoute');
 const commentsRoute    = require('./routes/commentsRoute');
 const horoscopeRoutes   = require('./routes/horoscopeRoutes');
-// const siteRoutes = require('./routes/siteRoute');
 
 require('./configs/passport.js');
 
@@ -42,8 +43,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // Express Layouts
-// app.set('layout', 'layouts/main-layout');
-// app.use(expressLayouts);
+app.set('layout', 'layouts/main-layout');
+app.use(expressLayouts);
 
 
 // uncomment after placing your favicon in /public

@@ -10,7 +10,7 @@ const HoroscopeSchema = new Schema({
     travel: String,
     party: String,
     comments: {
-        creator: { type: Schema.Types.ObjectId, ref: 'User', required: true },
+        creator: { type: Schema.Types.ObjectId, ref: 'User' },
         content: String
     }
     // date            : String,

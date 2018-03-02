@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="stylesheet" href="../../stylesheets/style.css">
   <title>Home</title>
 </head>
 <body>
@@ -21,21 +21,22 @@
           <li class="active"><a href="/">Home</a></li>
           <li><a href="/signs">Zodiac Signs</a></li>
           <li><a href="/comments">Comments</a></li>
-          <li><a href="#">About</a></li>
         </ul>
       </div>
     </nav>
-</div>   
-
-
+</div> 
+<div class = "horo1"> 
 <form action="/horoscopes/<%= horoscope._id %>/edit" method="POST">
-    <label for="comments">Comments</label>
+  <div class = "hi"><label for="comments">Comment</label></div>
+  <br>
     <textarea type="text" name="content" id="comments" ><%= horoscope.comments.content %> </textarea>
     <button type="submit">Update Horoscope</button>
 </form>
+</div>
 <div class="footer">
-        <p>GitHub</p>
-      </div>
-     </body>
-     </html>
+    <p>GitHub</p>
+  </div> 
+</body>
+</html>
+
      

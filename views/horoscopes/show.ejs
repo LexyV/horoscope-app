@@ -7,10 +7,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="stylesheet" href="../../stylesheets/style.css">
   <title>Home</title>
 </head>
-<body>
+
 <div>
   <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -21,28 +21,31 @@
           <li class="active"><a href="/">Home</a></li>
           <li><a href="/signs">Zodiac Signs</a></li>
           <li><a href="/comments">Comments</a></li>
-          <li><a href="#">About</a></li>
         </ul>
       </div>
     </nav>
-</div>   
+</div> 
 
+<body>
+<div class = "horo1">
+  <form id="form">
+    <h1><%= horoscope.horoscopes %></h1>
+    <div class = "hi3"><span><%= horoscope.name %></span>:</div>
+    <div class = "hi4"><%= horoscope.description %></div>
+    <br>
 
-<h1><%= horoscope.horoscopes %></h1>
-<h3>horoscope:<span><%= horoscope.name %></span></h3>
-    <h2>Comments</h2>
-<% console.log("HOROSCOPE", horoscope) %>
-
-    <% if(horoscope.comments){ %>
-        <p> <%= horoscope.comments.content %> 
-            <button> <a href="/horoscopes/<%=horoscope._id%>/edit">EDIT</a> </button>
-            <form action="/horoscopes/<%=horoscope._id%>/deletecomment" method="POST">
-                <button type="submit">DELETE</button>
-            </form>
-        </p>
-     <% } else {%>   
-      <p>There are no comments here!</p>
-    <% } %>
+    <h3>Comment:<% if(horoscope.comments){ %>
+           <%= horoscope.comments.content %></h3>
+              <button><a href="/horoscopes/<%= horoscope._id %>/edit">EDIT</a></button>
+              <form  method="POST" action="/horoscopes/<%= horoscope._id%>/deletecomment">
+                  <button type="submit">DELETE</button>
+              </form>
+          </p>
+      <% } else {%>   
+        <p>There are no comments here!</p>
+      <% } %>
+  </form>
+</div>  
 <div class="footer">
    <p>GitHub</p>
  </div>

@@ -10,7 +10,10 @@ router.get('/:id/allcomments', (req, res, next) => {
     console.log("horoscopeId ````````", horoscopeId)
     Horoscope.findById(horoscopeId, (err, horoscope) => {
         if (err) { return next(err); }
-        res.render('horoscopes/show', { horoscope: horoscope });
+        res.render('horoscopes/show', { 
+            horoscope: horoscope,
+            layout: "layouts/main-layout"
+         });
     });
 });
 
@@ -47,7 +50,7 @@ router.post('/:id/edit', (req, res, next) => {
             if (err) { 
                 return next(err); 
             }
-            res.redirect('/');
+            res.redirect(`/horoscopes/${horoscopeId}/allcomments`);
         })
     });
 });
