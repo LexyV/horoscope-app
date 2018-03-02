@@ -1,1 +1,113 @@
-<h1>hello world</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../../stylesheets/style.css">
+  <title>Home</title>
+</head>
+<body>
+<div>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Horoscope</a>
+      </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/signs">Zodiac Signs</a></li>
+          <li><a href="/comments">Comments</a></li>
+        </ul>
+      </div>
+    </nav>
+</div>    
+    <div class="container">
+      <div class="row horo">
+    <h1><%= user.sign  %> <%= "Daily Horoscope" %></h1>
+      <blockquote class="blockquote-reverse">
+        <p><% horoscopes.forEach(oneHoroscope =>{ %>
+          <% if(user.sign === oneHoroscope.name) { %>
+            <%= oneHoroscope.description %>
+
+          <div class="form-group com">
+            <form action="/horoscopes/<%= oneHoroscope._id %>/comments" method="post">
+              <label for="comment">Comments:</label>
+              <textarea class="form-control input-sm" rows="2" id="comment" style = "border:2px dashed rgb(196, 70, 189) ;" name="content"></textarea>
+              <button type="submit">Submit</button>
+            </form>
+
+          <% }})  %>
+          
+            <!-- <input type="submit" class="btn btn-info" value="Submit Button"> -->
+          </div>
+        </p>
+      <footer></footer>
+    </blockquote>
+    </div>
+  </div>   
+   <!-- Button Love Modal -->
+  
+<div class = "row1">
+ <div class="container1">
+   <div class="test1">
+    <img src="../images/background.jpg" alt="love" class="image1">
+      <div class="overlay1">
+        <div class="text">
+          <% horoscopes.forEach(oneHoroscope =>{ %>
+          <% if(user.sign === oneHoroscope.name) { %>
+            <%= oneHoroscope.love %>
+          <% }})  %>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <div class="container2">
+      <div class="test2">
+       <img src="../images/background.jpg" alt="love" class="image2">
+         <div class="overlay2">
+           <div class="text">
+              <% horoscopes.forEach(oneHoroscope =>{ %>
+                <% if(user.sign === oneHoroscope.name) { %>
+                  <%= oneHoroscope.success %>
+                <% }})  %>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="container3">
+        <div class="test3">
+         <img src="../images/background.jpg" alt="love" class="image3">
+           <div class="overlay3">
+             <div class="text">
+                <% horoscopes.forEach(oneHoroscope =>{ %>
+                  <% if(user.sign === oneHoroscope.name) { %>
+                    <%= oneHoroscope.travel %>
+                  <% }})  %>
+             </div>
+           </div>
+         </div>
+       </div>
+       <div class="container4">
+          <div class="test4">
+           <img src="../images/background.jpg" alt="love" class="image4">
+             <div class="overlay4">
+               <div class="text">
+                  <% horoscopes.forEach(oneHoroscope =>{ %>
+                    <% if(user.sign === oneHoroscope.name) { %>
+                      <%= oneHoroscope.party %>
+                    <% }})  %>
+               </div>
+             </div>
+           </div>
+         </div>
+        </div>
+ <div class="footer">
+    <p>GitHub</p>
+  </div>
+</div>
+</body>
+</html>
