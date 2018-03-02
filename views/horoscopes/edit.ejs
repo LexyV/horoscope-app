@@ -28,10 +28,11 @@
 <div class = "horo1"> 
 <form action="/horoscopes/<%= horoscope._id %>/edit" method="POST">
   <div class = "hi"><label for="comments">Comment</label></div>
-  <br>
+  <br><div class="comment-center">
     <textarea type="text" name="content" id="comments" ><%= horoscope.comments.content %> </textarea>
-    <button type="submit">Update Horoscope</button>
-</form>
+   <br> <button class="update-btn" type="submit">Update Horoscope</button>
+</div>
+  </form>
 </div>
 <div class="footer">
     <p>GitHub</p>

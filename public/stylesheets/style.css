@@ -32,7 +32,32 @@ a {
 .hi{
   font-size: 20px;
   color: rgb(196, 70, 189);
+  padding: 25px;
+  text-align: center;
 }
+
+.hi-text{
+  text-align: center;
+  margin: 0 auto;
+  height: 150px;
+  width: 200px;
+}
+textarea{
+  margin: 0 auto;
+  height: 250px;
+  width: 320px;
+}
+.comment-center{
+  text-align: center;
+  margin: 0 auto;
+}
+
+.update-btn{
+  padding: 10px;
+  margin-bottom: 25px;
+  margin-top: 25px
+}
+
 .hi2{
   font-size: 15px;
 }
@@ -199,7 +224,7 @@ h1{
 }
 .horo{
   background-color: rgb(124, 183, 190);
-  opacity: 0.7;
+  opacity: 0.8;
 }
 .horo1{
   background-color: rgb(124, 183, 190);
