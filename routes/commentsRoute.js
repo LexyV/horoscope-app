@@ -6,7 +6,13 @@ const router = express.Router();
 
 
 router.get("/comments", (req, res, next) => {
-    res.render("../views/horoscopes/index.ejs");
+    Horoscope.find({}, (err, horoscopes) => {
+        if (err) { next(err); }
+        res.render("../views/horoscopes/index.ejs", {
+            horoscopes: horoscopes
+        });
+
+    })
 });
 
 //Route to Handle New Comment
@@ -23,22 +29,36 @@ router.get('/horoscopes/:id/horoscopes/new', (req, res, next) => {
 router.post('/horoscopes/:id/comments', (req, res, next) => {
     // Load the Horoscope From the Database
     let horoscopeId = req.params.id;
+    console.log("horoscopeId",horoscopeId )
 
-    Horoscope.findById(horoscopeId, (err, horoscope) => {
+    Horoscope.findById(horoscopeId, (err, theHoroscope) => {
+        if(err){
+            // console.log("err is:", err)
+            next(err);
+            return;
+        }
+        // console.log("heyhoroscope is:", theHoroscope)
         // Create the Schema Object to Save the Comment
-        const newComment = new Comment({
-            content: req.body.content
+        const newComment = new Comments({
+            content: req.body.content,
+            creator: req.user
         });
-        
+        console.log("newComment ========:", newComment);
+        // console.log("my horoscope", horoscope)
         // Add Comment to Horoscope Comments Array
-        horoscope.comments.push(newComment);
+        theHoroscope.comments.push(newComment);
     
         // Save the horoscope to the Database
-        horoscope.save((err) => {
-            if (err) { return next(err); }
+        theHoroscope.save((err) => {
+            if (err) { 
+                console.log("new err: ", err)
+                return next(err); 
+            }
             // Redirect the user to the index page
             res.redirect('/');
+
         });
+
     });
 });
 

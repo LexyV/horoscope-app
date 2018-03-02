@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -25,14 +25,14 @@
         </div>
     </nav>
 </body>
-</html>  -->
+</html> 
 <ul>
     <% horoscopes.forEach((oneHoroscope) => { %>
         <li>
             <%= oneHoroscope.description %>
-            <a href="/horoscope/<%= horoscope._id %>">View Horoscope</a> 
-            <a href="/horoscope/<%= horoscope._id %>/edit">Comment</a>
-            <form action="/horoscope/<%= horoscope._id%>/delete" method="POST">
+            <a href="/horoscopes/<%= oneHoroscope._id %>">View Horoscope</a> 
+            <a href="/horoscopes/<%= oneHoroscope._id %>/edit">Edit</a>
+            <form action="/horoscopes/<%= oneHoroscope._id%>/delete" method="POST">
                 <button type="submit">Delete Comment</button>
             </form> 
         </li>

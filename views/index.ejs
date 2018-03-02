@@ -35,7 +35,7 @@
             <%= oneHoroscope.description %>
 
           <div class="form-group com">
-            <form action="/horoscopes/<%= oneHoroscope.id %>/comments" method="post">
+            <form action="/horoscopes/<%= oneHoroscope._id %>/comments" method="post">
               <label for="comment">Comments:</label>
               <textarea class="form-control input-sm" rows="2" id="comment" style = "border:2px dashed rgb(196, 70, 189) ;" name="content"></textarea>
               <button type="submit">Submit</button>

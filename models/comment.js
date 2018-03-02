@@ -6,7 +6,7 @@ const Schema         = mongoose.Schema;
 
 const CommentSchema = new Schema({
     creator         : { type: Schema.Types.ObjectId, ref: 'User', required: true },
-    horoscope       : { type: Schema.Types.ObjectId, ref: 'Horoscope', required: true },
+    // horoscope       : { type: Schema.Types.ObjectId, ref: 'Horoscope', required: true },
     content         : String
 });
 

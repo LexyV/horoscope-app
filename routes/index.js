@@ -1,32 +1,18 @@
 var express     = require('express');
 var route       = express.Router();
-var axios = require("axios");
-var base_url = "http://localhost:3000";
-var json = require("../db.json")
-// console.log("my json: ", json)
-
-// const User        = require("../models/user");
+const Horoscope = require("../models/horoscope");
 
 route.get('/', (req, res, next) => {
-    // console.log("------")
-    // console.log("im in!!!")
-    // axios.get("base_url/horoscopess")
-    // .then(res =>{
-    //     console.log("my signs: ", res)
-    //     res.render('index', {
-    //         signs: res
-    //     })
-    // })
-
-    // console.log("current user:", user)
-    res.locals.user = req.user;
-    res.render('index', {
-        horoscopes: json.horoscopes,
-        // user
-    });
-
-    // JS code to determine which user is signed in
-    // and which horoscope to show
+    Horoscope.find({}, (err, horoscopes) => {
+        if(err){
+            next(err);
+            return;
+        }
+        res.render('index', {
+            horoscopes: horoscopes,
+            // user
+        })
+    })
 })
 
 module.exports  = route;

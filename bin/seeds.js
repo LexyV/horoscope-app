@@ -1,16 +1,18 @@
-{
-  "horoscopes" : [
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/app');
+
+const Horoscope = require('../models/horoscope');
+
+
+const horoscopes = [
     {
-      "id"  : 1,
       "name": "Capricorn", 
       "description" : "You are capicorn."
     },
     {
-      "id"  : 2,
       "name": "SECOND ONE"
     },
     {
-      "id"  : 3,
       "name": "Pisces",
       "description" : "You will encounter frustration this week when you come across a Libra trying to research if Kim Kardashian's butt is fake. Just remember to woosah your way home.",
       "love" : "hi",
@@ -20,41 +22,43 @@
       "comments": []
     },
     {
-      "id"  : 4,
       "name": "Aries" 
     },
     {
-      "id"  : 5,
       "name": "Taurus" 
     },
     {
-      "id"  : 6,
       "name": "Gemini" 
     },
     {
-      "id"  : 7,
       "name": "Cancer" 
     },
     {
-      "id"  : 8,
       "name": "Leo" 
     },
     {
-      "id"  : 9,
       "name": "Virgo" 
     },
     {
-      "id"  : 10,
       "name": "Libra" 
     },
     {
-      "id"  : 11,
       "name": "Scorpio" 
     },
     {
-      "id"  : 12,
       "name": "Sagittarius" 
     }
-  ]
-}
+  ];
+
+
+  Horoscope.create(horoscopes, (err, savedHoroscopes) => {
+    if (err) { throw err; }
+  
+  
+    savedHoroscopes.forEach(theHoroscope => {
+      console.log(`${theHoroscope.name} - ${theHoroscope._id}`);
+    });
+    mongoose.disconnect();
+  });
+
 

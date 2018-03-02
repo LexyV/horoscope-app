@@ -31,7 +31,7 @@ const horoscopeRoutes   = require('./routes/horoscopeRoutes');
 require('./configs/passport.js');
 
 var app = express();
-var jsonServer = require('json-server');
+// var jsonServer = require('json-server');
 
 
 //Mongoose connection
@@ -81,8 +81,7 @@ app.use('/signs', signs);
 app.use('/', commentsRoute);
 // app.use('/comments', comment)
 app.use('/horoscopes', horoscopeRoutes);
-app.use('/api', jsonServer.router('db.json'));
-
+// app.use('/api', jsonServer.router('db.json'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

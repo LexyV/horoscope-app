@@ -3,8 +3,13 @@ const Comment      = require('./comment');
 const Schema        = mongoose.Schema;
 
 const HoroscopeSchema = new Schema({
-    horoscope       : String,
-    date            : String,
+    name       : String,
+    description: String,
+    love: String,
+    success: String,
+    travel: String,
+    party: String,
+    // date            : String,
     comments        :[Comment.schema]
 });
 
