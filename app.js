@@ -83,9 +83,7 @@ app.use('/', authRoutes);
 app.use('/', index);
 app.use('/signs', signs);
 app.use('/', commentsRoute);
-// app.use('/comments', comment)
 app.use('/horoscopes', horoscopeRoutes);
-// app.use('/api', jsonServer.router('db.json'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -104,5 +102,9 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.get('*', (req, res) => {
+  res.redirect('/login');
+}); 
 
 module.exports = app;
