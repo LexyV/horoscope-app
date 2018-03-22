@@ -79,15 +79,16 @@ app.use((req, res, next)=> {
 });
 
 //MIDDLEWARE
+
+app.get('/', (req, res) => {
+  res.redirect('/login');
+}); 
+
 app.use('/', authRoutes);
 app.use('/', index);
 app.use('/signs', signs);
 app.use('/', commentsRoute);
 app.use('/horoscopes', horoscopeRoutes);
-
-app.get('/', (req, res) => {
-  res.redirect('/login');
-}); 
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
