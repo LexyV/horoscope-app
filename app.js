@@ -30,12 +30,15 @@ const commentsRoute    = require('./routes/commentsRoute');
 const horoscopeRoutes   = require('./routes/horoscopeRoutes');
 
 require('./configs/passport.js');
+require("dotenv").config();
+mongoose.connect(process.env.MONGODB_URI);
 
 var app = express();
 // var jsonServer = require('json-server');
 
 
 //Mongoose connection
+// mongoose.connect("mongodb://localhost/app");
 mongoose.connect("mongodb://localhost/app");
 
 // view engine setup
