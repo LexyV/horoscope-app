@@ -85,6 +85,10 @@ app.use('/signs', signs);
 app.use('/', commentsRoute);
 app.use('/horoscopes', horoscopeRoutes);
 
+app.get('/', (req, res) => {
+  res.redirect('/login');
+}); 
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -102,9 +106,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-app.get('*', (req, res) => {
-  res.redirect('/login');
-}); 
 
 module.exports = app;
