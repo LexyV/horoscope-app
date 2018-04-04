@@ -58,6 +58,8 @@ authRoutes.post("/signup", (req, res, next) => {
     });
 }); 
 
+//Figure Out WHats Going On!!
+
 authRoutes.get("/login", (req, res, next) => {
   res.render("auth/login", { message: "error" });
 });
@@ -68,6 +70,7 @@ authRoutes.post("/login", passport.authenticate("local", {
   failureFlash: true,
   passReqToCallback: true
 }));
+
 
 authRoutes.get("/logout", (req, res, next) => {
   req.session.destroy((err) => {
