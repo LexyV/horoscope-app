@@ -218,9 +218,9 @@ h1{
   text-align: center;
   padding: 10px;
   position: fixed;
-    height: 50px;
-    bottom: 0;
-    width: 94%;
+  height: 50px;
+  bottom: 0;
+  width: 94%;
 }
 .horo{
   background-color: rgb(124, 183, 190);
@@ -228,11 +228,12 @@ h1{
 }
 .horo1{
   background-color: rgb(124, 183, 190);
-  opacity: 0.9;
+  opacity: 0.8;
   width: 650px;
- margin-left: 350px;
- margin-top: 100px;
- padding-bottom: 1px;;
+  margin-left: 350px;
+  margin-top: 100px;
+  padding-bottom: 1px;
+  border-radius: 25px;
 }
 .link{
   color: rgb(196, 70, 189);
@@ -241,9 +242,9 @@ h1{
   background-color: rgb(124, 183, 190);
   opacity: 0.9;
   width: 550px;
- margin-left: 400px;
- margin-top: 20px;
- padding-bottom: 1px;;
+  margin-left: 400px;
+  margin-top: 20px;
+  padding-bottom: 1px;;
 }
 
 

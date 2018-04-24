@@ -69,6 +69,7 @@ authRoutes.post("/login", passport.authenticate("local", {
   failureRedirect: "/login",
   failureFlash: true,
   passReqToCallback: true
+  
 }));
 
 
